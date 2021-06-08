@@ -1,5 +1,5 @@
 <template>
-  <h1 >This is View Member</h1>
+  <h1 class="title">This is View Member</h1>
 
     <!--<button @click="getMemberInfo()">Get Info</button>-->
   <router-link to ="/" class="btn btn-warning">back</router-link>

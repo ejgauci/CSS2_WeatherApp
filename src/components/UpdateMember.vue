@@ -1,5 +1,5 @@
 <template>
-  <h1 >This is Update Member</h1>
+  <h1 class="title">This is Update Member</h1>
   <router-link to ="/" class="btn btn-warning">back</router-link>
 
     <br>

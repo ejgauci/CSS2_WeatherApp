@@ -1,7 +1,7 @@
 <template>
   <div class="login">
 		
-	<h1>Login</h1>
+	<h1 class="title">Login</h1>
 	<form @submit.prevent="Login">
 		<input type="text" placeholder="Email" v-model="email"/>
 		<input type="password" placeholder="Password" v-model="password"/>

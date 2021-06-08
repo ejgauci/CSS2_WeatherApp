@@ -1,10 +1,10 @@
 <template>
 	<div class="home">
-		<h1>Welcome, {{ name }}</h1>
+		<h1 class="title">Welcome, {{ name }}</h1>
 		
 		<button class="btn btn-secondary" @click="Logout">Logout</button>
 
-		<div class="modal is-active" id="modal-activity">
+		<div class="modal" id="modal-activity">
 				<div class="modal-background"></div>
 				<div class="modal-card">
 					<header class="modal-card-head">
@@ -28,8 +28,8 @@
 		<main>
 			<div v-for="fav in favourite" :key="fav">
 				<button @click="getDataWithButton(fav)" class="btn btn-success">{{fav}}</button>
-				<!--<button @click="openDeleteModal(fav)" class="btn btn-danger">X</button>-->
-				<button @click="deleteFav(fav)" class="btn btn-danger">X</button>
+				<button @click="openDeleteModal(fav)" class="btn btn-danger">X</button>
+				<!--<button @click="deleteFav(fav)" class="btn btn-danger">X</button>-->
 			</div>
 
 
@@ -203,6 +203,7 @@ export default {
 				})
 			}, 100)
 			
+			document.getElementById('modal-activity').classList.remove('is-active')
 		},
 		openDeleteModal(fav){
 			this.deleteSelection = fav
